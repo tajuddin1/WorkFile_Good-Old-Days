@@ -1,34 +1,35 @@
 @font-face {
-    font-family: 'Tahoma', sans-serif;;
+    font-family: "Tahoma", sans-serif;
     src: url(../font/Tahoma\ Regular\ font.ttf);
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
-img{
+img {
     width: 100%;
 }
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
-body{
+body {
     background-color: #d1d1d0;
-    font-family: 'Tahoma', sans-serif;
+    font-family: "Tahoma", sans-serif;
 }
 
-.container{
+.container {
     max-width: 850px;
     width: 100%;
     margin: auto;
 }
 
-.top-banner{
+.top-banner {
     width: 100%;
     height: 150px;
     background-image: url(../images/banner.jpg);
@@ -39,17 +40,21 @@ body{
 }
 
 .main-content-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     gap: 5px;
     margin: 5px 0;
 }
 
 aside.main-content {
+    -ms-flex-preferred-size: 70%;
     flex-basis: 70%;
     background: #111f1f;
 }
 
 aside.sidebar-content {
+    -ms-flex-preferred-size: 30%;
     flex-basis: 30%;
     background: #111f1f;
 }
@@ -59,6 +64,8 @@ aside.sidebar-content {
 }
 
 .content-title {
+    background-image: -webkit-gradient(linear, left bottom, left top, from(#7eb9e5), to(#0c5286));
+    background-image: -o-linear-gradient(bottom, #7eb9e5, #0c5286);
     background-image: linear-gradient(0deg, #7eb9e5, #0c5286);
     padding: 5px 0px 5px 25px;
     border: 1px solid #0f5286;
@@ -88,7 +95,7 @@ aside.sidebar-content {
     text-shadow: -1px 1px 1px #111f1f;
 }
 
-span.icon{
+span.icon {
     display: inline-block;
     width: 12px;
     margin-right: 8px;
@@ -99,6 +106,8 @@ span.icon{
     font-size: 14px;
     color: #7db8e4;
     margin-bottom: 5px;
+    -webkit-transition: 0.3s all;
+    -o-transition: 0.3s all;
     transition: 0.3s all;
 }
 
@@ -119,10 +128,18 @@ span.icon{
 }
 
 .footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     width: 100%;
+    background-image: -webkit-gradient(linear, left bottom, left top, from(#7eb9e5), to(#0c5286));
+    background-image: -o-linear-gradient(bottom, #7eb9e5, #0c5286);
     background-image: linear-gradient(0deg, #7eb9e5, #0c5286);
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     gap: 20px;
     padding: 10px 0;
@@ -138,23 +155,36 @@ p.footer-text {
 
 /* HOST PAGE */
 .first-col {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     margin-bottom: 20px;
 }
 
 .host-image {
+    -ms-flex-preferred-size: 35%;
     flex-basis: 35%;
     max-width: 200px;
 }
 
 .host-description {
+    -ms-flex-preferred-size: 65%;
     flex-basis: 65%;
 }
 
-.sceond-col{
+.sceond-col {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+    -ms-flex-direction: row-reverse;
     flex-direction: row-reverse;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 
@@ -163,18 +193,18 @@ p.footer-text {
     margin-bottom: 5px;
 }
 
-
-
-
-
 /* RESPONSIVE CSS */
-@media screen and (max-width:690px) {
-    .top-banner{
+@media screen and (max-width: 690px) {
+    .top-banner {
         background-image: url(../images/banner-690x150.jpg);
     }
 }
-@media screen and (max-width:590px) {
+
+@media screen and (max-width: 590px) {
     .main-content-wrapper {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
         flex-direction: column-reverse;
     }
 
@@ -183,34 +213,40 @@ p.footer-text {
     }
 
     .nav-content ul {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -ms-flex-wrap: wrap;
         flex-wrap: wrap;
         gap: 5px;
     }
-    
-    span.icon{
+
+    span.icon {
         display: none;
     }
 
     .nav-content ul li ul.sub-nav {
         margin-left: 0px;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -ms-flex-wrap: wrap;
         flex-wrap: wrap;
         gap: 10px;
     }
 
     .first-col,
-    .sceond-col{
+    .sceond-col {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
         row-gap: 20px;
     }
 }
 
-@media screen and (max-width:500px) {
-    .top-banner{
+@media screen and (max-width: 500px) {
+    .top-banner {
         background-image: url(../images/banner-430x150.jpg);
     }
 }
-
-
-
