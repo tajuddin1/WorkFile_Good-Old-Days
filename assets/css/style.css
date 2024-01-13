@@ -206,7 +206,9 @@ p.footer-text {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    gap: 10px;
+    row-gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .epi-col {
@@ -215,13 +217,16 @@ p.footer-text {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     gap: 10px;
     position: relative;
+    flex-basis: 48%;
+    padding: 20px;
+    border: 1px solid #0c5286;
 }
 
 .epi-image {
@@ -246,14 +251,15 @@ p.footer-text {
 }
 
 .epi-description {
-    -ms-flex-preferred-size: 65%;
-    flex-basis: 65%;
+    width: 100%;
 }
 
 .epi-description p {
     margin: 0;
     margin-bottom: 10px;
     line-height: 1.3em;
+    font-size: 14px;
+    text-align: center;
 }
 
 .epi-description p a {
@@ -273,7 +279,8 @@ p.footer-text {
     display: flex;
     gap: 10px;
     color: #7eb9e5;
-    margin-top: 10px;
+    margin-top: 15px;
+    justify-content: center;
 }
 
 .epi-icon span.icon {
@@ -303,8 +310,15 @@ p.footer-text {
     margin: 5px 0;
 }
 
+.epi-col.epi-sceris {
+    border: none;
+    padding: 0;
+    width: 100%;
+}
+
 .epi-col.epi-sceris .epi-description p {
     margin: 10px 0;
+    text-align: start;
 }
 
 a.epi-sourch-btn {
